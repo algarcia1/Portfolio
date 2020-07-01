@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>
+    my portfolio
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Gugi|Graduate|Roboto+Mono" rel="stylesheet" type="text/css">
+<!--Ajax Lib-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <!--Bootstrap--> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--Animation-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!--AOS-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">  
+ 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--keyboard bg image-->
+<div class="bg-img">
+  <!--topnav-->
+  <div class="topnav transparent navbar-fixed-top" id="myTopnav">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#portfolio">portfolio</a>
+    <a href="#email"><i class="fa fa-envelope"></i></a>
+    <a href="#linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#github"><i class="fa fa-github"></i></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+ 
+  <!--Heading-->
+  <!--Communicate Design Program-->
+<br><br><br><br><br><br><br><br><br>
+      <center>
+        
+<div class="headingCDP">
+<span class="text-wrapper">
+  <span class="line line1"></span>
+  <span class="letters letters-left">Communicate.</span>
+  <span class="letters letters-middle">Design.</span>
+  <span class="letters letters-right">Program.</span>
+  <span class="line line2"></span>
+</span>
+</div>
+
+<!--Subheading-->
+  <div class="statement2 aos-init" data-aos="fade-zoom-out">
+  <br>
+    Power within one's self.
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  </center>
+
+  <!--may cut dito kasi fit to content yung marble then keyboard background-->
+  </div>
+<!--Neon flicker-->
+<div class="bg-description">
+  <br>
+
+  <div class="sign">
+    <span class="fast-flicker">Ab</span>ou<span class="flicker">t</span> 
+  </div>
+  <!--Introduction / About-->
+  <br>
+  <div class="description aos-init" data-aos="fade-right">
+
+  <br> <br> 
+ <b> <span style="font-size: 40px;"> Hi, I'm Alyssa.</span> </b> <br><br>
+ <p>
+ I'm a <b> Full Stack Web Developer.</b>. <br>
+ Despite the stereotypes of IT professionals <br> sitting on their 
+ office chairs and facing their <br>
+ computer monitors and programming projects <br>
+ most of the day, I did not restrain myself <br>
+ with what I love to do and make money with it. <br> <br>
+ On the other side, I have experience on <br>
+  android development and I also have interest <br>
+   on designing, editing videos and images.
+
+  </p>  
+  </div>
+ <!-- My Clipart-->  
+  <img class="img-animation aos-init" data-aos="fade-left" src="img/my-clipart.png"  style=" left: 0; margin-top: -25%; margin-left: 750px; width: 350px;">
+   
+ <br> <br> <br> <br>
+ 
+  <br> <br>  
+ 
+
+  <!--Skills-->
+
+  <div class="sign">
+ 
+    <span class="fast-flicker">Sk</span>i<span class="flicker">lls</span> 
+  </div>
+  <div class="description2">  <br><br><br><br><br><br> </div>  
+ <br> <br> <br> <br>
+  <br> <br>  
+  
+</div>
+
+
+<!--Works-->
+
+<!--topnav js-->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+<!--Subheading Animation-->
+
+
+<!--Description Animation-->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 120,
+    duration: 1000,
+  });
+</script>
+
+<script>
+  AOS.init({
+    offset: 120,
+    duration: 2000,
+    targets: '.statement2',
+  });
+</script>
+
+
+
+
+<!-- Heading animation-->
+<script>
+anime.timeline({loop: (false)})
+  .add({
+    targets: '.headingCDP .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.headingCDP .line',
+    duration: 2000,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.headingCDP .letters-middle',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.headingCDP .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.headingCDP .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.headingCDP .line',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+ 
+
+
+
+</script>
+
+
+
+</body>
+</html>
